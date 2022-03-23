@@ -1,0 +1,8 @@
+D:\. PEMOGRAMAN\PERTEMUAN 3\class and objec\class and objec\bin\Debug\class and objec.exe.config
+D:\. PEMOGRAMAN\PERTEMUAN 3\class and objec\class and objec\bin\Debug\class and objec.exe
+D:\. PEMOGRAMAN\PERTEMUAN 3\class and objec\class and objec\bin\Debug\class and objec.pdb
+D:\. PEMOGRAMAN\PERTEMUAN 3\class and objec\class and objec\obj\Debug\class and objec.exe
+D:\. PEMOGRAMAN\PERTEMUAN 3\class and objec\class and objec\obj\Debug\class and objec.pdb
+D:\. PEMOGRAMAN\PERTEMUAN 3 Class & Object\class and objec\class and objec\bin\Debug\class and objec.exe.config
+D:\. PEMOGRAMAN\PERTEMUAN 3 Class & Object\class and objec\class and objec\obj\Debug\class and objec.exe
+D:\. PEMOGRAMAN\PERTEMUAN 3 Class & Object\class and objec\class and objec\obj\Debug\class and objec.pdb
