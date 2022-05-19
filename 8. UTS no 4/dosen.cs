@@ -10,11 +10,13 @@ namespace DOSEN
     {
         public int id;
         public int NIK;
-        public string Nama, Gender, Course;
+        public string Nama;
+        public string Gender;
+        public string Course;
 
         public void Dosen()
         {
-            Console.WriteLine("Dosen Pengampu  : Bayu Nadya Kusuma S.T, M.Eng");
+            Console.WriteLine("Dosen Pengampu  : Kamarudin, M.Kom");
             Console.WriteLine("Mata Kuliah     : Pemrograman (ST021)");
         }
 
