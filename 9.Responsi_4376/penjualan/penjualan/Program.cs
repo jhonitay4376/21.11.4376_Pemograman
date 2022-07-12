@@ -8,9 +8,10 @@ namespace penjualan
 { 
     class Program
     {
+        static List<Produk> daftarProduk = new List<Produk>();
+        static Produk prod = new Produk();
         static void Main(string[] args)
         {
-            
             Console.Title = "Responsi UAS Matakuliah Pemrograman";
 
             while (true)
@@ -23,15 +24,15 @@ namespace penjualan
                 switch (nomorMenu)
                 {
                     case 1:
-                        TambahPenjualan();
+                        TambahProduk();
                         break;
 
                     case 2:
-                        HapusPenjualan();
+                        HapusProduk();
                         break;
 
                     case 3:
-                        TampilPenjualan();
+                        TampilProduk();
                         break;
 
                     case 4: // keluar dari program
@@ -47,79 +48,77 @@ namespace penjualan
         {
             Console.Clear();
 
-            Console.WriteLine("Pilih Menu Aplikasi");
-            Console.WriteLine();
-            Console.WriteLine("1. Tambah Penjualan");
-            Console.WriteLine("2. Hapus Penjualan");
-            Console.WriteLine("3. Tampilkan Penjualan");
-            Console.WriteLine("4. Keluar");
+            Console.WriteLine("Pilihan Menu Aplikasi\n");
+            Console.WriteLine("1. Tambah produk");
+            Console.WriteLine("2. Hapus produk");
+            Console.WriteLine("3. Tampilkan produk");
+            Console.WriteLine("4. Keluar\n");
         }
 
-        static void TambahPenjualan()
+        static void TambahProduk()
+        {
+            Console.Clear();
+            prod = new Produk();
+            string TJ;
+            Console.WriteLine("Tambah data prdoduk");
+            Console.Write("Kode Produk   : ");
+            prod.KodeProduk = Console.ReadLine();
+            Console.WriteLine("Tanggal  : ");
+            prod.Tanggal = Console.ReadLine();
+            Console.Write("Nama Customer   : ");
+            prod.NamaCstmr = Console.ReadLine();
+            Console.Write("Jenis [T/K]  : ");
+            TJ = Console.ReadLine();
+            if (TJ == "T")
+            {
+                prod.Jenis = "Tunai";
+            }
+            else if (TJ == "K")
+            {
+                prod.Jenis = "Kredit";
+            }
+            Console.Write("Total Nota   : ");
+            prod.HargaJual = Convert.ToInt32(Console.ReadLine());
+            daftarProduk.Add(prod);
+
+            Console.WriteLine("\nTekan ENTER untuk kembali ke menu");
+            Console.ReadKey();
+        }
+
+        static void HapusProduk()
         {
             Console.Clear();
 
-            Console.WriteLine("Tambah Data Penjualan");
-            Console.WriteLine();
-
-            Console.Write("Nota: ");
-            string Nota = Console.ReadLine();
-            Console.Write("Tanggal: ");
-            string Tanggal = Console.ReadLine();
-            Console.Write("Customer: ");
-            string Customer = Console.ReadLine();
-            Console.Write("Jenis[T/K]: ");
-            char iJenis = Convert.ToChar(Console.ReadLine());
-            string Jenis;
-            if (iJenis == 'T' || iJenis == 't')
-                Jenis = "Tunai";
+            Console.WriteLine("Hapus Data Produk\n");
+            Console.Write("Kode Produk : ");
+            string kodep = Console.ReadLine();
+            var itemRemove = daftarProduk.SingleOrDefault(f => f.KodeProduk == kodep);
+            if (itemRemove == null)
+            {
+                Console.WriteLine("Kode Produk Tidak Ditemukan");
+            }
             else
-                Jenis = "Kredit";
-            Console.Write("Total Nota: ");
-            int Total = Convert.ToInt32(Console.ReadLine());
-
-            Penjualan mhs = new Penjualan();
-            mhs.Nota = Nota;
-            mhs.Tanggal = Tanggal;
-            mhs.Customer = Customer;
-            mhs.Jenis = Jenis;
-            mhs.Total = Total;
-            List<Penjualan> daftarPenjualan = new List<Penjualan>();
-            daftarPenjualan.Add(mhs);
+            {
+                daftarProduk.Remove(itemRemove);
+                Console.WriteLine();
+                Console.WriteLine("Data Produk Berhasil Dihapus");
+            }
 
             Console.WriteLine("\nTekan ENTER untuk kembali ke menu");
             Console.ReadKey();
         }
 
-        static void HapusPenjualan()
+        static void TampilProduk()
         {
             Console.Clear();
 
-            Console.WriteLine("Hapus Data Penjualan");
-            Console.WriteLine();
-
-            Console.Write("Nota: ");
-            string Nota = Console.ReadLine();
-
-            int i = 0;
-           // int size = daftarPenjualan.Count();
-
-            Console.WriteLine("\nTekan ENTER untuk kembali ke menu");
-            Console.ReadKey();
-        }
-
-        static void TampilPenjualan()
-        {
-            Console.Clear();
-
-
-
-            Console.WriteLine("Data Penjualan");
-            Console.WriteLine();
-
-            int i = 0;
-
-           
+            int no = 1;
+            Console.WriteLine("Data Produk\n");
+            foreach (Produk objProd in daftarProduk)
+            {
+                Console.WriteLine("{0}.{1},{2},{3},{4},{5}", no, objProd.KodeProduk, objProd.Tanggal, objProd.NamaCstmr, objProd.Jenis, objProd.HargaJual);
+                no++;
+            }
 
             Console.WriteLine("\nTekan enter untuk kembali ke menu");
             Console.ReadKey();

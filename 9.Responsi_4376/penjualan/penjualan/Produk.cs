@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace penjualan
 {
-    class Penjualan
+    class Produk
     {
         public string KodeProduk { get; set; }
         public string Tanggal { get; set; }
