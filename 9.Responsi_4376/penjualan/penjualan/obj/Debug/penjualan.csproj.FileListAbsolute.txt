@@ -1,0 +1,6 @@
+D:\. PEMOGRAMAN\Github\9.Responsi_4376\penjualan\penjualan\bin\Debug\penjualan.exe.config
+D:\. PEMOGRAMAN\Github\9.Responsi_4376\penjualan\penjualan\obj\Debug\penjualan.csprojResolveAssemblyReference.cache
+D:\. PEMOGRAMAN\Github\9.Responsi_4376\penjualan\penjualan\bin\Debug\penjualan.exe
+D:\. PEMOGRAMAN\Github\9.Responsi_4376\penjualan\penjualan\bin\Debug\penjualan.pdb
+D:\. PEMOGRAMAN\Github\9.Responsi_4376\penjualan\penjualan\obj\Debug\penjualan.exe
+D:\. PEMOGRAMAN\Github\9.Responsi_4376\penjualan\penjualan\obj\Debug\penjualan.pdb
